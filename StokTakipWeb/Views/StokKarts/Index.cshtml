@@ -1,0 +1,92 @@
+﻿@model IEnumerable<StokTakipWeb.Models.StokKart>
+
+@{
+    ViewBag.Title = "Stok Liste";
+}
+
+<h2>Stok Liste</h2>
+
+<p>
+    @Html.ActionLink("Yeni Oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StokKodu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OzelKod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GenelAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StokTipi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlışFiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SatışFiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kdv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Barkod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Durum)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StokKodu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OzelKod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GenelAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StokTipi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlışFiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SatışFiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kdv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Barkod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Durum)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

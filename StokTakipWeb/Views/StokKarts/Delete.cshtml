@@ -1,0 +1,112 @@
+﻿@model StokTakipWeb.Models.StokKart
+
+@{
+    ViewBag.Title = "Stok Çıkış";
+}
+
+<h2>Stok Çıkış</h2>
+
+<h3>Bu Ürünü Silmek istediğine emin misin?</h3>
+<div>
+    <h4>StokKart</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StokKodu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StokKodu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OzelKod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OzelKod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenelAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenelAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StokTipi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StokTipi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlışFiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlışFiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SatışFiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SatışFiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kdv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kdv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Barkod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Barkod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Durum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Durum)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

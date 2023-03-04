@@ -1,0 +1,68 @@
+﻿@model IEnumerable<StokTakipWeb.Models.Adresleme>
+
+@{
+    ViewBag.Title = "Adresleme Liste";
+}
+
+<h2>Adresleme Liste</h2>
+
+<p>
+    @Html.ActionLink("Yeni Oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StokKodu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BosaltmaYontemi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeciciKabul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hasar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MalKabul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yerleştirme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YüklemeBosaltmaAlani)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StokKodu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BosaltmaYontemi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeciciKabul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hasar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MalKabul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yerleştirme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YüklemeBosaltmaAlani)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
